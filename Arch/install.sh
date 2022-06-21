@@ -1,5 +1,8 @@
 #!/bin/bash
 loadkeys de-latin1
+curl -o chroot.sh https://raw.githubusercontent.com/tmak2002/Scripts/main/Arch/chroot.sh
+curl -o loader.conf https://raw.githubusercontent.com/tmak2002/Scripts/main/Arch/loader.conf
+curl -o arch.conf https://raw.githubusercontent.com/tmak2002/Scripts/main/Arch/arch.conf
 sgdisk --zap-all -o /dev/sda
 sgdisk -n 1::+312M -t 1:ef00 /dev/sda
 sgdisk -n 2::+50G /dev/sda
