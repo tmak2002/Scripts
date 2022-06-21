@@ -21,6 +21,6 @@ cp -v arch.conf /mnt/boot/loader/entries/arch.conf
 cp -v loader.conf /mnt/boot/loader/loader.conf
 cp -v chroot.sh /mnt/chroot.sh
 chmod +x /mnt/chroot.sh
-arch-chroot /mnt ./install.sh
+arch-chroot /mnt ./chroot.sh
 rm /mnt/chroot.sh
 umount -R /mnt
