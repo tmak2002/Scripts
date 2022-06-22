@@ -8,4 +8,8 @@ ln -sf /usr/share/timezone/Europe/Berlin /etc/localtime
 mkinitcpio -p linux
 passwd
 bootctl install
+# User Setup
+useradd -m -U -G wheel -s /bin/bash torben
+passwd torben
+sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g'
 exit
