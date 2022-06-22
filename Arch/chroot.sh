@@ -18,5 +18,6 @@ pacman -S xorg-server xorg-xinit \
   firefox rxvt-unicode \
   git \
 
-git clone https://github.com/tmak2002/dotfiles /home/torben
+git clone https://github.com/tmak2002/dotfiles /home/torben/dotfiles
+cd /home/torben/dotfiles && bash install.sh
 exit
