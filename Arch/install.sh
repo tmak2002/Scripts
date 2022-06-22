@@ -21,12 +21,12 @@ mkdir -p /mnt/{boot,home}
 mount /dev/sda1 /mnt/boot
 mount /dev/sda3 /mnt/home
 
+BASE=(base base-devel linux linux-firmware dhcpcd neovim)
 [ "$PROCESSOR" == "intel" ] && BASE+=(intel-ucode)
 [ "$PROCESSOR" == "amd" ] && BASE+=(amd-ucode)
 [ "$GRAPHICS" == "nvidia" ] && BASE+=(nvidia nvidia-utils nvidia-settings)
 [ "$GRAPHICS" == "intel" ] && BASE+=(xf86-video-intel)
 [ "$GRAPHICS" == "amd" ] && BASE+=(xf86-video-amdgpu)
-PACKAGES=(base base-devel linux linux-firmware dhcpcd neovim)
 pacstrap /mnt ${BASE[@]}
 
 genfstab -U /mnt >> /mnt/etc/fstab
