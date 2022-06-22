@@ -16,7 +16,7 @@ pacman -S xorg-server xorg-xinit \
   i3-gaps polybar jgmenu python-pywal \
   pulseaudio pavucontrol \
   firefox rxvt-unicode \
-  git \
+  git starship \
 
 git clone https://github.com/tmak2002/dotfiles /home/torben/dotfiles
 cd /home/torben/dotfiles && bash install.sh
