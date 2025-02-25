@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Move to /sbin/ and use "make install" after compiling your kernel
 
 mount /efi
