@@ -1,0 +1,6 @@
+#!/bin/bash
+# Move to /sbin/ and use "make install" after compiling your kernel
+
+mount /efi
+cp -v /usr/src/linux/arch/x86/boot/bzImage /efi/EFI/gentoo/bzImage.efi
+umount /efi
